@@ -1,3 +1,14 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="demo"></p>
+
+<script>
 navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
 .then(device => device.gatt.connect())
 .then(server => {
@@ -16,3 +27,8 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
   console.log(`Battery percentage is ${value.getUint8(0)}`);
 })
 .catch(error => { console.error(error); });
+  document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+</body>
+</html>
