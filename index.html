@@ -24,10 +24,9 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
   return characteristic.readValue();
 })
 .then(value => {
-  console.log(`Battery percentage is ${value.getUint8(0)}`);
+  document.getElementById("demo").innerHTML = `Battery percentage is ${value.getUint8(0)}`;
 })
 .catch(error => { console.error(error); });
-  document.getElementById("demo").innerHTML = 5 + 6;
 </script>
 
 </body>
